@@ -15,26 +15,8 @@ $(function () {
     });
     $("#search_input").keypress(function (event) {
         if(event.keyCode == 13){
-            alert("我特么只是给你做个样式，你还真敢搜索呀，自个儿百度去。。");
-            //此处可以帮用户带参百度搜索
-            // var search_text = $("#search_input").val();
-            // $.ajax({
-            //     url:"http://suggestion.baidu.com/su?wd="+search_text,
-            //     method:"GET",
-            //     data:{},
-            //     dataType:"jsonP",
-            //     success:function (data) {
-            //         console.log(data);
-            //     },
-            //     error:function (XMLHttpRequest, textStatus, errorThrown) {
-            //         console.error(XMLHttpRequest);
-            //         console.error(textStatus);
-            //         console.error(errorThrown);
-            //     },
-            //     complete:function (XMLHttpRequest, textStatus) {
-            //
-            //     }
-            // })
+            var search_text = $("#search_input").val();
+            window.open("https://www.baidu.com/s?wd="+search_text);
         }
     });
     /**
